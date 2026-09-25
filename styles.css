@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.container {
+    width: 350px;
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image";
+}
+
+.container div {
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    background: #111a2d;
+    color: white;
+}
+
+.menu {
+    grid-area: menu;
+    background: #f23850;
+    color: white;
+}
+
+.hero {
+    grid-area: hero;
+    background: #5089c8;
+    color: white;
+}
+
+.main {
+    grid-area: main;
+    background: #233550;
+    color: white;
+}
+
+.banner {
+    grid-area: banner;
+    background: #ffd365;
+}
+
+.extra {
+    grid-area: extra;
+    background: #4dbc9b;
+}
+
+.image {
+    grid-area: image;
+    background: #c5e8e8;
+}
+
+
+@media (min-width: 901px) {
+
+    .container {
+        width: 700px;
+
+        grid-template-columns: 2fr 3fr 1fr 2fr;
+
+        grid-template-areas:
+            "header menu menu menu"
+            "hero hero hero hero"
+            "main main . image"
+            "main main . extra"
+            "banner banner banner banner";
+    }
+}
